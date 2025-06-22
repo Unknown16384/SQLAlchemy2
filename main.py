@@ -38,5 +38,5 @@ if __name__ == '__main__':
     session.add_all(data)
     session.commit()
 
-    for row in session.query(Orders):
+    for row in session.query(Orders).all():
         print(f'{row.Date}: {row.Product.Name}, {row.Quantity}')
